@@ -1,0 +1,97 @@
+@import '../../Sass/Mixit';
+
+.wrapper{
+    background-color: transparent;
+    backdrop-filter: blur(25%);
+    box-shadow: 5px 1px 20px 0px #00000073;
+    width: 95%;
+    margin: auto;
+    @include fcs;
+    h2{
+        padding: 0 0 0 15px;
+        @include font($f-fp,35px,400);
+        margin-top: -4px;
+        a{
+            color: $clr-primary; 
+        }
+        span{
+            color: $clr-green;
+        }
+    }
+    .d{
+        position: relative;
+        @include fcs;
+        li{
+            padding: 10px 15px;
+            a{
+                color: $clr-secandry;
+                @include font ($f-fr,16px,400);
+                position: relative;
+                width: 100%;
+            
+                &:hover{          
+                    color: $clr-primary;                                                     
+                }
+                &::after{
+                    content: '';
+                    width: 0%;
+                    height: 2px;
+                    position: absolute;
+                    bottom: -2px;
+                    left: 0px;
+                    background-color: $clr-primary;
+                    transition: 0.7s;
+                }
+                &:hover::after{
+                    width: 100%;
+                }
+            }
+            .active::after{
+                content: '';
+                width: 100%;
+                height: 2px;
+                position: absolute;
+                bottom: -2px;
+                left: 0px;
+                background-color: $clr-primary;
+            }
+        }
+    }
+    .icon{
+        display: none;
+        margin-right: 20px;
+        font-size: 20px;
+        color: $clr-secandry;
+    }
+        
+}
+
+@media (max-width:485px) {
+    .wrapper{
+        width: 100%;
+        .d{
+            display: none;
+        }
+        .shownav{
+            display: block;
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            top: 64px;
+            right: 0px;
+            background: linear-gradient(116deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            backdrop-filter: blur(10px);
+            li{
+                margin-bottom: 10px;
+                a{
+                    font-size: 14px;
+                }
+            }
+
+        }
+        .icon{
+            display: block;
+            cursor: pointer;
+        }
+    }
+}

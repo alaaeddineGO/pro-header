@@ -1,0 +1,25 @@
+//font-family
+$f-fp:"Playwrite BE VLG", cursive;
+$f-fr:"Rubik", sans-serif;
+//color
+$clr-primary: #38bdf8;
+$clr-secandry: #f0f8ff;
+$clr-green: #00FF40;
+
+
+@mixin font($f-f,$f-s,$f-w){
+    font-family: $f-f;
+    font-size: $f-s;
+    font-weight: $f-w;
+    font-style: normal;
+}
+@mixin fcc{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+@mixin fcs{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

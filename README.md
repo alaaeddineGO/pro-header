@@ -1,5 +1,5 @@
 # pro-header
-##we used:
+we used:
 -responsive header
 -router
 -sass
